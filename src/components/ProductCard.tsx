@@ -100,6 +100,7 @@ function ProductCard({ image, name, price, variants, inStock }: ProductCardProps
           {variants.map((variant) => (
             <>
             <div className="flex flex-wrap gap-2" key={variant.id}>
+              {/* COLOR VARIANTS */}
               {variant.id === 'color' && 
                 variant.options.map((option) => {
                   const isSelected = selectedVariants[variant.id] === option;
@@ -118,6 +119,7 @@ function ProductCard({ image, name, price, variants, inStock }: ProductCardProps
                 })
               }
               </div>
+              {/* REST OF VARIANTS */}
               <div className="flex flex-wrap gap-2">
               {variant.id !== 'color' && (
                 <div className="flex flex-wrap items-center gap-2">
