@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "image": "black-samba.jpg",
+    "name": "Adidas Samba",
+    "price": 129.99,
+    "variants": [
+      { "id": "color", "options": ["black", "red", "green"] },
+      { "id": "size", "options": ["40", "41", "42", "43", "44"] }
+    ],
+    "inStock": true
+  },
+  {
+    "id": "2",
+    "image": "t-shirt.jpg",
+    "name": "Black T-Shirt",
+    "price": 49.99,
+    "variants": [
+      { "id": "size", "options": ["XS", "S", "M", "L", "XL"] }
+    ],
+    "inStock": false
+  },
+  {
+    "id": "3",
+    "image": "pen-drive.jpg",
+    "name": "Mobile Disk",
+    "price": 89.99,
+    "variants": [
+      { "id": "storage", "options": ["512GB", "1TB"] }
+    ],
+    "inStock": true
+  }
+]
