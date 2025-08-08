@@ -26,12 +26,22 @@ function ProductCard({ image, name, price, variants, inStock }: ProductCardProps
   const [isAdded, setIsAdded] = useState(false);
 
   const getColorClass = (color: string) => {
-    const specialColors = {
+    // Mapeo completo de colores para asegurar que Tailwind los incluya en producción
+    const colorMap = {
       'black': 'bg-black',
       'white': 'bg-white',
+      'red': 'bg-red-500',
+      'green': 'bg-green-500',
+      'blue': 'bg-blue-500',
+      'yellow': 'bg-yellow-500',
+      'purple': 'bg-purple-500',
+      'pink': 'bg-pink-500',
+      'indigo': 'bg-indigo-500',
+      'gray': 'bg-gray-500',
+      'orange': 'bg-orange-500',
     };
     
-    return specialColors[color.toLowerCase() as keyof typeof specialColors] || `bg-${color}-500`;
+    return colorMap[color.toLowerCase() as keyof typeof colorMap] || 'bg-gray-200';
   };
 
   const handleVariantSelection = (variantId: string, option: string) => {
